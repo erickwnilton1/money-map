@@ -7,31 +7,34 @@ import {
   TrendingUpIcon,
   WalletIcon,
 } from "lucide-react";
+import { auth } from "@clerk/nextjs/server";
 
 const SummaryCards = async () => {
+  const { userId } = await auth();
+
   const depositsTotal = Number(
     (
       await db.transaction.aggregate({
-        where: { type: "Deposit" },
+        where: { type: "Deposit", userId: userId || undefined },
         _sum: { amount: true },
       })
-    )?._sum?.amount
+    )?._sum?.amount || 0
   );
   const investimentsTotal = Number(
     (
       await db.transaction.aggregate({
-        where: { type: "Investment" },
+        where: { type: "Investment", userId: userId || undefined },
         _sum: { amount: true },
       })
-    )?._sum?.amount
+    )?._sum?.amount || 0
   );
   const expensesTotal = Number(
     (
       await db.transaction.aggregate({
-        where: { type: "Expense" },
+        where: { type: "Expense", userId: userId || undefined },
         _sum: { amount: true },
       })
-    )?._sum?.amount
+    )?._sum?.amount || 0
   );
 
   const balance = depositsTotal - investimentsTotal - expensesTotal;
