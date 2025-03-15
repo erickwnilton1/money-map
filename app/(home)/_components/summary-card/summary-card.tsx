@@ -20,7 +20,7 @@ const SummaryCard = ({
     <Card>
       <CardHeader className="flex-col items-start lg:gap-4 lg:flex-row lg:items-center">
         {icon}
-        <p className="text-muted-foreground">{title}</p>
+        <p className="text-muted-foreground text-[#081e9d]">{title}</p>
       </CardHeader>
       <CardContent className="flex h-auto w-auto justify-between">
         <p>

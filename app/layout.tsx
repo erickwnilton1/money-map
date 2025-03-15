@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MAP",
+  title: "MAP - controle financeiro",
   description:
     "O controle financeiro pessoal com toda a praticidade para organizar suas finanças.",
 };

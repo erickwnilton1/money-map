@@ -11,7 +11,7 @@ const AddTransactionButton = () => {
   return (
     <>
       <Button
-        className="rounded-lg bg-gray-100 text-purple-800 font-sans hover:bg-white"
+        className="rounded-lg bg-[#081e9d] text-white font-sans hover:bg-[#081e9df2]"
         onClick={() => setFormIsOpen(true)}
       >
         Adicionar transação
