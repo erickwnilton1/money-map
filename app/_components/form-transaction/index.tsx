@@ -272,7 +272,7 @@ const FormTransaction = ({
               </DialogClose>
               <Button
                 type="submit"
-                className="bg-purple-800 hover:bg-purple-600"
+                className="bg-[#081e9d] hover:bg-[#28089de5]"
               >
                 {isUpdate ? "Atualizar" : "Adicionar"}
               </Button>

@@ -53,7 +53,10 @@ const DeleteTransactionButton = ({ transactionId }: DeleteTransactionProps) => {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancelar</AlertDialogCancel>
-          <AlertDialogAction onClick={handleConfirmDelete}>
+          <AlertDialogAction
+            onClick={handleConfirmDelete}
+            className="bg-[#081e9d] hover:bg-[#081e9df7]"
+          >
             Continuar
           </AlertDialogAction>
         </AlertDialogFooter>
